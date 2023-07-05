@@ -8,7 +8,7 @@ namespace saithink\lib;
 
 /**
  * Http操作类
- * Class Json
+ * Class Http
  * @package saithink\lib
  */
 class Http
@@ -27,7 +27,7 @@ class Http
         } elseif ($type=='get') {
             $url .= '?';
             foreach ($data as $k=>$v) {
-                $url.= \sprintf("%s=%s&", $k, $v);
+                $url .= \sprintf("%s=%s&", $k, $v);
             }
             $data = null;
             $url = rtrim($url, "?");
